@@ -1,0 +1,13 @@
+/home/ubuntu/wrinkling_epithelial_continuum/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/CMakeFiles/list_install_components.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/CMakeFiles/install.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/CMakeFiles/install/local.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/CMakeFiles/install/strip.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/hlinflate_hold_deflate.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/edit_cache.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/list_install_components.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/install.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/install/local.dir
+/home/ubuntu/wrinkling_epithelial_continuum/build/inflate_hold_deflate/CMakeFiles/install/strip.dir
