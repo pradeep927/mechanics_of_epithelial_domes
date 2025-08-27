@@ -1,5 +1,6 @@
 
 We use a parallel finite element library called hiperlife (High Performance Library for Finite Elements) (https://zenodo.org/doi/10.5281/zenodo.14927572), which serves as the core numerical engine for the simulations presented in this study. This library depends on other open-source libraries. The library is openly distributed to the community and is available online at {https://gitlab.com/hiperlife/hiperlife}. The aim of this library is to provide a computational framework to address problems of cell and tissue mechanobiology for a wide range of cases and users, with special focus on curved surfaces. The hiperlife is written in C++, uses the Message Passing Interface (MPI) paradigm for parallelism, and is built on top of several packages of the Trilinos Project. The installation of the hiperlife libraries can be carried out by following the guidelines provided at: {https://gitlab.com/hiperlife/hiperlife/-/blob/dev/INSTALL.md}. Prior to following the instructions for installation, it is necessary to clone the libraries via  Linux command {{git clone git@gitlab.com:hiperlife/hiperlife.git}} or download from {https://gitlab.com/hiperlife/hiperlife}.
+Installation takes approximately 1 hour on a Dell XPS 13 equipped with an Intel Core i7 8th Gen processor running Ubuntu 22.04.
 
 \section*{Code Organization and Project Setup}
 
@@ -37,7 +38,7 @@ mpirun -n 4 /home/ubuntu/wrinkling_epithelial_continuum/source_compiled/bin/hlin
 
 
 Here, the option {-n 4} specifies the number of processors. This value can be adjusted according to the available computational resources and the problem size.
-
+If run on a Dell XPS 13 equipped with an Intel Core i7 8th Gen processor (4 cores, 8 threads), the simulation of 5,000 timesteps for a mesh with 3,000 element nodes requires approximately 24 hours using 4 MPI processes.
 {Postprocessing and Visualization}
 
 During execution, the code generates output files in VTK format (e.g., {sol_dis_*.vtk}), which store the displacement and other field variables at different time steps. These files can be directly visualized and post-processed using ParaView. To streamline postprocessing, we provide a ParaView state file ({paraview_state.pvsm}), which loads the output files, applies predefined visualization settings, and enables rapid analysis of simulation results, including deformation fields, wrinkling patterns, and stress distributions.
