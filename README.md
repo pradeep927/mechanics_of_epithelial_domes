@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 We use a parallel finite element library called hiperlife (High Performance Library for Finite Elements) (https://zenodo.org/doi/10.5281/zenodo.14927572), which serves as the core numerical engine for the simulations presented in this study. This library depends on other open-source libraries. The library is openly distributed to the community and is available online at {https://gitlab.com/hiperlife/hiperlife}. The aim of this library is to provide a computational framework to address problems of cell and tissue mechanobiology for a wide range of cases and users, with special focus on curved surfaces. The hiperlife is written in C++, uses the Message Passing Interface (MPI) paradigm for parallelism, and is built on top of several packages of the Trilinos Project. 
+=======
+We use a parallel finite element library called hiperlife (High Performance Library for Finite Elements) (https://zenodo.org/doi/10.5281/zenodo.14927572), which serves as the core numerical engine for the simulations presented in this study. This library depends on other open-source libraries. The library is openly distributed to the community and is available online at {https://gitlab.com/hiperlife/hiperlife}. The aim of this library is to provide a computational framework to address problems of cell and tissue mechanobiology for a wide range of cases and users, with special focus on curved surfaces. The hiperlife is written in C++, uses the Message Passing Interface (MPI) paradigm for parallelism, and is built on top of several packages of the Trilinos Project. The installation of the hiperlife libraries can be carried out by following the guidelines provided at: {https://gitlab.com/hiperlife/hiperlife/-/blob/dev/INSTALL.md}. Prior to following the instructions for installation, it is necessary to clone the libraries via  Linux command {{git clone git@gitlab.com:hiperlife/hiperlife.git}} or download from {https://gitlab.com/hiperlife/hiperlife}.
+Installation takes approximately 1 hour on a Dell XPS 13 equipped with an Intel Core i7 8th Gen processor running Ubuntu 22.04.
+>>>>>>> 94a7c0c9ce9434b6d58336cb1afb9abb97deeb29
 
 STEP 1: {Installation of hiperlife}
 
@@ -41,8 +46,13 @@ mpirun -n 4 /home/ubuntu/wrinkling_epithelial_continuum/source_compiled/bin/hlin
 
 
 Here, the option {-n 4} specifies the number of processors. This value can be adjusted according to the available computational resources and the problem size.
+<<<<<<< HEAD
 
 The solution convergence at each timestep has been printed to the file slurm-55239.out. It can be opened with any text editor or viewed directly in the terminal using the Linux command cat slurm-55239.out.
+=======
+If run on a Dell XPS 13 equipped with an Intel Core i7 8th Gen processor (4 cores, 8 threads), the simulation of 5,000 timesteps for a mesh with 3,000 element nodes requires approximately 24 hours using 4 MPI processes.
+{Postprocessing and Visualization}
+>>>>>>> 94a7c0c9ce9434b6d58336cb1afb9abb97deeb29
 
 The solution at each time is printed in VTK format with the filename sol_dis.{timestep}.vtk. The inflation process occurs from timestep 1 to 500, followed by a hold period from timestep 500 to 5000. Deflation then takes place over 4000 steps. At timestep 500, the volume reaches 100% and the dome is fully inflated, and the volume remains constant till the end of 5000th step. Then the deflation is applied uniformly in 4000 total steps with a constant deltat such that: by timestep 7000, the volume is reduced by 50%, and by timestep 8000, it is reduced by 75%. For illustration, some representative VTK files have been stored in the folder named Expected results. During the simulations, a data file named globalIntegrals.dat is also generated, which contains information about the area, volume, and elastic energy at each timestep.  
 
